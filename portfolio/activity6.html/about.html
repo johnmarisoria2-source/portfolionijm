@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | PERFOOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f9f7f2;
+            font-family: 'Lato', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ── PAGE HEADER ── */
+        .page-header {
+            background-color: #e8e0d5;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: 'PERFOOM';
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-size: 180px;
+            color: rgba(44, 44, 44, 0.05);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            pointer-events: none;
+            letter-spacing: 10px;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            color: #666;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        /* ── BRAND STORY ── */
+        .brand-story {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        .brand-story .label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #8c7b6c;
+            margin-bottom: 20px;
+        }
+
+        .brand-story h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #2c2c2c;
+            line-height: 1.3;
+            margin-bottom: 30px;
+        }
+
+        .brand-story h2 em {
+            font-style: italic;
+            color: #8c7b6c;
+        }
+
+        .brand-story p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.9;
+            max-width: 680px;
+            margin: 0 auto 20px;
+        }
+
+        /* ── DIVIDER ── */
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: #8c7b6c;
+            margin: 50px auto;
+        }
+
+        /* ── VALUES SECTION ── */
+        .values-section {
+            background-color: #fff;
+            padding: 80px 20px;
+        }
+
+        .values-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #2c2c2c;
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: 1px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 50px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #8c7b6c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .value-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: #2c2c2c;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.8;
+        }
+
+        /* ── CRAFTSMANSHIP STRIP ── */
+        .craft-strip {
+            background-color: #2c2c2c;
+            color: #f9f7f2;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .craft-strip .label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #8c7b6c;
+            margin-bottom: 20px;
+        }
+
+        .craft-strip h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .craft-strip p {
+            max-width: 620px;
+            margin: 0 auto 40px;
+            color: #bbb;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #8c7b6c;
+            display: block;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat .stat-label {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+        }
+
+        /* ── TEAM SECTION ── */
+        .team-section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ── OWNER PROFILE ── */
+        .owner-profile {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 900px;
+            margin: 50px auto 0;
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .owner-photo-wrap {
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .owner-photo-wrap img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 3px solid #8c7b6c;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .owner-photo-wrap .owner-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            color: #2c2c2c;
+            margin-bottom: 4px;
+        }
+
+        .owner-photo-wrap .owner-role {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8c7b6c;
+        }
+
+        .owner-bio h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: #2c2c2c;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .owner-bio h3 em {
+            font-style: italic;
+            color: #8c7b6c;
+        }
+
+        .owner-bio p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.9;
+            margin-bottom: 14px;
+        }
+
+        .owner-bio .signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-style: italic;
+            color: #8c7b6c;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .owner-profile {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+                gap: 30px;
+            }
+        }
+
+        /* ── CTA SECTION ── */
+        .cta-section {
+            background-color: #e8e0d5;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #2c2c2c;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 35px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2c2c2c;
+            color: #fff;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #8c7b6c;
+        }
+
+        /* ── FOOTER ── */
+        .about-footer {
+            background-color: #2c2c2c;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* ── LOCATION SECTION ── */
+        .location-section {
+            padding: 80px 20px;
+            background-color: #f9f7f2;
+            text-align: center;
+        }
+
+        .location-section .label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #8c7b6c;
+            margin-bottom: 16px;
+        }
+
+        .location-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+        }
+
+        .location-section .address-text {
+            font-size: 15px;
+            color: #777;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .map-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 420px;
+            border: none;
+            display: block;
+        }
+
+        .map-details {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+        }
+
+        .map-detail-item {
+            text-align: center;
+        }
+
+        .map-detail-item .icon {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .map-detail-item .detail-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8c7b6c;
+            margin-bottom: 4px;
+        }
+
+        .map-detail-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 36px; }
+            .brand-story h2 { font-size: 30px; }
+            .craft-strip h2 { font-size: 28px; }
+            .stats-row { gap: 30px; }
+            .brand-story { padding: 0 20px; }
+            .map-details { gap: 24px; }
+            .map-container iframe { height: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>About Us</h1>
+        <p>The Art & Soul of PERFOOM</p>
+    </header>
+
+    <!-- Brand Story -->
+    <section class="brand-story">
+        <div class="label">Our Story</div>
+        <h2>Born from a passion for <em>scent</em> as a form of art</h2>
+        <p>
+            PERFOOM was founded on a single belief: that fragrance is one of the most intimate 
+            forms of self-expression. What you wear on your skin tells a story — of where you've 
+            been, who you are, and who you aspire to become.
+        </p>
+        <p>
+            We began as a small atelier, blending rare ingredients sourced from the world's most 
+            extraordinary places — Bulgarian rose fields, Indian sandalwood forests, the resin-soaked 
+            markets of Oman. Today, every bottle we create carries that same devotion to craft and origin.
+        </p>
+        <div class="divider"></div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+        <div class="values-inner">
+            <h2 class="section-heading">What We Stand For</h2>
+            <div class="values-grid">
+
+                <div class="value-card">
+                    <div class="value-icon">🌿</div>
+                    <h3>Natural Ingredients</h3>
+                    <p>Every fragrance is built on ethically sourced botanicals, resins, and essences — never synthetic shortcuts.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">✦</div>
+                    <h3>Artisan Craft</h3>
+                    <p>Each bottle is hand-blended in small batches by master perfumers with decades of olfactory expertise.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">♾</div>
+                    <h3>Timeless Design</h3>
+                    <p>Our bottles are designed to be displayed, admired, and passed down — objects of lasting beauty.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Sustainable Luxury</h3>
+                    <p>We believe luxury and responsibility go hand in hand. Our packaging is fully recyclable and carbon-offset.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship Dark Strip -->
+    <section class="craft-strip">
+        <div class="label">Our Process</div>
+        <h2>Crafted with Patience.<br>Perfected with Passion.</h2>
+        <p>
+            From the first raw material to the final sealed bottle, every PERFOOM fragrance 
+            takes an average of 18 months to develop. Our perfumers compose, test, and refine 
+            each formula hundreds of times before it ever reaches your hands.
+        </p>
+
+        <div class="stats-row">
+            <div class="stat">
+                <span class="number">18</span>
+                <span class="stat-label">Months per Fragrance</span>
+            </div>
+            <div class="stat">
+                <span class="number">42+</span>
+                <span class="stat-label">Rare Ingredients</span>
+            </div>
+            <div class="stat">
+                <span class="number">6</span>
+                <span class="stat-label">Master Perfumers</span>
+            </div>
+            <div class="stat">
+                <span class="number">12</span>
+                <span class="stat-label">Countries Sourced</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner / Founder Section -->
+    <section class="team-section">
+        <h2 class="section-heading">The Person Behind the Scent</h2>
+
+        <div class="owner-profile">
+            <div class="owner-photo-wrap">
+                <img src="images/4f12848f-d316-4f5f-bc23-0a4251a30e1e.jpg" alt="John Mari S. Soria">
+                <div class="owner-name">John Mari S. Soria</div>
+                <div class="owner-role">Founder & CEO</div>
+            </div>
+            <div class="owner-bio">
+                <h3>A dream that started with a single <em>bottle.</em></h3>
+                <p>
+                    My name is John Mari S. Soria, and I am the founder and CEO of PERFOOM. 
+                    What started as a personal fascination with fragrance grew into something 
+                    I never expected — a brand built on the belief that scent is one of the 
+                    most powerful ways to express who you are.
+                </p>
+                <p>
+                    PERFOOM was established in 2024, born out of a simple frustration: 
+                    luxury fragrance felt out of reach for most people. I wanted to change 
+                    that — to create a space where quality, elegance, and affordability 
+                    could exist together without compromise.
+                </p>
+                <p>
+                    From curating our first collection out of a small room to building an 
+                    online store that reaches customers nationwide, every step of this journey 
+                    has been driven by passion and purpose. I believe every person deserves 
+                    a signature scent — one that tells their story without saying a word.
+                </p>
+                <div class="signature">John Mari S. Soria</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+        <div class="label">Visit Us</div>
+        <h2>Find Our Store</h2>
+        <p class="address-text">📍 Cebu, Philippines</p>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps?q=10.295250,123.863449&z=16&output=embed"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="map-details">
+            <div class="map-detail-item">
+                <div class="icon">📍</div>
+                <div class="detail-label">Location</div>
+                <p>Cebu, Philippines</p>
+            </div>
+            <div class="map-detail-item">
+                <div class="icon">🕐</div>
+                <div class="detail-label">Store Hours</div>
+                <p>Mon–Sat: 9AM – 7PM</p>
+            </div>
+            <div class="map-detail-item">
+                <div class="icon">📞</div>
+                <div class="detail-label">Contact</div>
+                <p>Available In-Store</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Find Your Signature Scent</h2>
+        <p>Explore our full collection and discover the fragrance that speaks to who you are.</p>
+        <a href="product.html" target="mainframe" class="btn">Shop the Collection</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="about-footer">
+        <p>&copy; 2026 PERFOOM. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

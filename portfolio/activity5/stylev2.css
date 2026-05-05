@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(to bottom, #FFD700 0%, #8B4513 100%), url('https://example.com/fried-chicken-background.jpg') no-repeat center center fixed; /* Golden-brown gradient with fried chicken background image (replace URL) */
+    background-size: cover; /* Covers the full background */
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Bold, playful font */
+    margin: 0;
+    padding: 20px; /* Added padding for clean spacing */
+    color: #000000; /* Black text for contrast */
+}
+
+.Header {
+    border: 4px solid #8B4513; /* Brown border for fried chicken crispiness */
+    max-width: 1200px; /* Responsive width cap */
+    min-height: 250px; /* Flexible height */
+    background-color: #FFD700; /* Golden yellow background */
+    background-image: url('https://example.com/chicken-drumstick.jpg'); /* Background image of a drumstick (replace URL) */
+    background-size: contain; /* Fits the image without distortion */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px; /* Slightly refined rounding */
+    margin: 20px auto; /* Consistent auto-centering with padding */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    padding: 20px; /* Inner spacing for cleanliness */
+    animation: bounceIn 1s ease-out, glow 2s infinite alternate; /* Animation: bounce on load, glow pulse */
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); } /* Golden glow */
+    100% { box-shadow: 0 4px 8px rgba(255, 215, 0, 0.8); }
+}
+
+.navbar {
+    border: 4px solid #8B4513; /* Brown border */
+    max-width: 1200px;
+    min-height: 50px; /* Flexible height */
+    background-color: #FFF8DC; /* Light cream for contrast */
+    background-image: url('https://example.com/chicken-wings.jpg'); /* Background image of wings (replace URL) */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right; /* Positioned to the right for subtlety */
+    border-radius: 25px;
+    margin: 10px auto; /* Reduced margin for tighter layout */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    padding: 10px; /* Inner spacing */
+}
+
+.main {
+    border: 4px solid #8B4513;
+    max-width: 1200px;
+    min-height: 350px; /* Flexible height */
+    background-color: #FFD700;
+    background-image: url('https://example.com/chicken-bucket.jpg'); /* Background image of a chicken bucket (replace URL) */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px;
+    margin: 10px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.footer {
+    border: 4px solid #8B4513;
+    max-width: 1200px;
+    min-height: 80px; /* Flexible height */
+    background-color: #FFF8DC;
+    background-image: url('https://example.com/fried-chicken-logo.jpg'); /* Background image of a generic fried chicken logo or pattern (replace URL) */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px;
+    margin: 10px auto;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
