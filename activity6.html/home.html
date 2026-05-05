@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | PERFOOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f9f7f2;
+            font-family: 'Lato', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero-bg.webp');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .btn {
+            background-color: #2c2c2c;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #8c7b6c;
+        }
+
+        .featured {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c2c2c;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background-color: #f0f0f0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2c2c2c;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #8c7b6c;
+            font-weight: bold;
+        }
+
+        .about-section {
+            background-color: #e8e0d5;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #2c2c2c;
+        }
+
+        .about-section p {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .home-footer {
+            background-color: #2c2c2c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>PERFOOM</h1>
+        <p>Discover Your Signature Scent</p>
+        <a href="product.html" target="mainframe" class="btn">Shop Collection</a>
+    </section>
+
+    <section class="featured">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/OIP (1).webp" alt="Rose Éternelle">
+                </div>
+                <h3>Rose Éternelle</h3>
+                <p>Floral • Sweet • Elegant</p>
+                <p class="price">₱6,950.00</p>
+                <a href="product.html" target="mainframe" class="btn">View Details</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/OIP (2).webp" alt="Oud Noir">
+                </div>
+                <h3>Oud Noir</h3>
+                <p>Woody • Spicy • Intense</p>
+                <p class="price">₱8,700.00</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/OIP (3).webp" alt="Citrus Breeze">
+                </div>
+                <h3>Citrus Breeze</h3>
+                <p>Fresh • Citrus • Light</p>
+                <p class="price">₱5,500.00</p>
+                <a href="product.html" target="mainframe" class="btn">View Details</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about-section">
+        <h2>Our Story</h2>
+        <p>
+            At PERFOOM, we believe fragrance is more than a scent—it's an emotion, a memory, a statement. 
+            Our perfumes are crafted with the finest ingredients from around the world, blended to create 
+            unforgettable olfactory experiences.
+        </p>
+    </section>
+
+    <footer class="home-footer">
+        <p>&copy; 2026 PERFOOM. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

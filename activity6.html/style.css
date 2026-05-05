@@ -1,0 +1,111 @@
+/* --- RESET & VARIABLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9f7f2; /* Soft Cream Background */
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.header {
+    width: 80%;
+    height: 150px;
+    background-color: #e8e0d5; /* Muted Beige */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: If you want the image to be the background of the header */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('images/Fragrance.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Makes image subtle so text pops */
+    z-index: 1;
+}
+
+.header-content {
+    z-index: 2; /* Keeps text above image */
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #2c2c2c;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 16px;
+    color: #555;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* --- NAVIGATION --- */
+#nav {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: center; /* Centers links */
+    align-items: center;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #555;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+#nav a:hover {
+    color: #8c7b6c; /* Gold/Brown hover color */
+    border-bottom: 1px solid #8c7b6c;
+}
+
+/* --- MAIN CONTENT --- */
+.main {
+    width: 80%;
+    height: 600px; /* Increased height for better viewing */
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    border-radius: 4px;
+}
+
+/* --- FOOTER --- */
+.footer {
+    width: 80%;
+    height: 80px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+}
